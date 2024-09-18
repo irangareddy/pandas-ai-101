@@ -1,0 +1,32 @@
+{
+  "Natural Language Querying": [
+    "Which Pokemon would excel as defensive tanks based on a high combination of Defense and Sp. Def stats?",
+    "Identify the top 10 Pokemon with the best balance between Attack, Speed, and Defense across all generations.",
+    "Which Pokemon types show the highest variance in total stats, and how does this impact their overall in-game performance?",
+    "List Legendary Pokemon that have similar stat distributions to non-Legendary Pokemon from the same generation.",
+    "What are the average stats for Pokemon introduced in odd-numbered generations, and how do they compare to even-numbered generations?",
+    "Which Pokemon from Generation 1 would be most competitive if re-introduced in Generation 7, based on stat power creep trends?"
+  ],
+  "Data Visualization": [
+    "Generate a 3D scatter plot of HP, Attack, and Defense stats, categorized by Generation and Type 1 for cross-comparison.",
+    "Create a box plot of Speed stats across different generations, highlighting the distribution differences between Legendary and non-Legendary Pokemon.",
+    "Plot a heatmap showing the correlation between all stat columns (HP, Attack, Sp. Atk, etc.), and identify any strong positive or negative correlations.",
+    "Visualize a radar chart for Legendary Pokemon to compare their stat spreads across different types and generations.",
+    "Create a stacked bar chart that shows the cumulative stats for each Type 1, split into HP, Attack, Defense, and Sp. Atk contributions."
+  ],
+  "Data Cleansing": [
+    "Identify and remove any Pokemon that have inconsistent stat totals compared to their documented values.",
+    "Create a data pipeline to handle missing 'Type 2' values by filling them with the most common Type 2 per Type 1 category.",
+    "Detect and replace outlier stat values (those that deviate 3 standard deviations from the mean) for each numerical column.",
+    "Convert the 'Legendary' column into an integer (0 for False, 1 for True) for easier statistical modeling.",
+    "Automatically correct mismatched 'Type 1' and 'Type 2' combinations based on existing patterns in the dataset (e.g., all Dragon/Flying should be standardized)."
+  ],
+  "Feature Generation with LLM": [
+    "Create a 'Combat_Readiness' feature by combining Attack, Speed, and Defense, weighted by Generation, to predict a Pokemon's success in competitive battles.",
+    "Generate a 'Resilience Index' that ranks Pokemon based on the sum of their HP, Defense, and Sp. Def, adjusted for Speed.",
+    "Develop a 'Mythical_Potential' score by comparing Legendary Pokemon to famous superheroes from Marvel and DC, mapping their stats to strength, agility, and intelligence.",
+    "Create a 'Total_Power_Scaling' feature that normalizes each Pokemon's stat totals by the maximum stats available in their generation, adjusting for type-based advantages.",
+    "Develop a 'Type Advantage Matrix' that assigns each Pokemon a strength score based on the effectiveness of its type combination against other types.",
+    "Create a 'Stat Consistency Ratio' that measures how evenly distributed a Pokemon's six main stats are, to find balanced or specialized Pokemon."
+  ]
+}

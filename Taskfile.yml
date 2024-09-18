@@ -1,0 +1,58 @@
+version: '3'
+
+dotenv: ['.copier-answers.env', '.env']
+
+vars:
+  PACKAGE: pandas_ai_101
+  DIST_DIR: dist
+
+tasks:
+  poetry:install:
+    desc: Install project dependencies using Poetry
+    cmds:
+      - poetry install
+
+  check:prepare:
+    desc: Prepare for checks
+    cmds:
+      - echo "Preparing for checks"
+
+  run:
+    desc: Run the Streamlit application
+    cmds:
+      - poetry run streamlit run {{.PACKAGE}}/app.py
+
+  dev:
+    desc: Run the Streamlit application in development mode with auto-reload
+    cmds:
+      - poetry run streamlit run {{.PACKAGE}}/app.py --server.runOnSave=true
+
+  lint:
+    desc: Run linter on Python files
+    cmds:
+      - poetry run flake8 {{.PACKAGE}}
+
+  format:
+    desc: Format Python files using Black
+    cmds:
+      - poetry run black {{.PACKAGE}}
+
+  test:
+    desc: Run tests
+    cmds:
+      - poetry run pytest
+
+  update-deps:
+    desc: Update project dependencies
+    cmds:
+      - poetry update
+
+  shell:
+    desc: Spawn a shell within the virtual environment
+    cmds:
+      - poetry shell
+
+  help:
+    desc: Display help information
+    cmds:
+      - task --list

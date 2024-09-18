@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "pandas-ai-101"
+version = "0.1.0"
+description = ""
+authors = ["Ranga Reddy Nukala <sairangareddy22@gmail.com>"]
+readme = "README.md"
+packages = [{include = "pandas_ai_101"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pandasai = "2.2.14"
+numpy = "1.26.4"
+pandas = "1.5.3"
+streamlit = "^1.38.0"
+pyyaml = "^6.0.2"
+seaborn = "^0.13.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
